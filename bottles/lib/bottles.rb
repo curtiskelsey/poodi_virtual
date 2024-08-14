@@ -1,4 +1,8 @@
 class Bottles
+    def song
+        verses(99, 0)
+    end
+
     def verses(startingBottleCount, endingBottleCount)
         result = ""
         startingBottleCount.downto(endingBottleCount) do |currentBottleCount|
