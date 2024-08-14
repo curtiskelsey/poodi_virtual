@@ -1,4 +1,12 @@
 class Bottles
+    def verses(startingBottleCount, endingBottleCount)
+        result = ""
+        startingBottleCount.downto(endingBottleCount) do |currentBottleCount|
+            result += verse(currentBottleCount) + "\n"
+        end
+        return result[0...-1]
+    end
+
     def verse(currentBottleCount)
         nextBottleCount = currentBottleCount - 1
         return  firstPhrase(currentBottleCount) +
